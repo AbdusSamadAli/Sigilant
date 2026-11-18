@@ -1,0 +1,15 @@
+id: corr-web-dir-enum
+title: Web Content Discovery (Directory Brute Forcing)
+type: distinct_count
+level: medium
+description: One IP requested many distinct non-existent paths (HTTP 404) in a short time.
+tags: [attack.reconnaissance, attack.t1595.003]
+filter:
+  event.dataset: web.access
+  http.response.status_code: 404
+group_by: [source.ip]
+distinct_field: url.path
+timeframe: 2m
+threshold: 20
+falsepositives:
+  - Broken links after a site migration (many IPs, same paths) - this rule groups by IP for that reason.

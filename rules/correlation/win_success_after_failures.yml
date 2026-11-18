@@ -1,0 +1,21 @@
+id: corr-win-success-after-failures
+title: Windows Logon Success After Repeated Failures
+type: sequence
+level: critical
+description: A source IP with a burst of 4625 failures then a successful 4624 logon to the same host.
+tags: [attack.lateral_movement, attack.t1078, attack.credential_access, attack.t1110]
+group_by: [source.ip, host.name]
+timeframe: 10m
+steps:
+  - name: failed logons
+    min_count: 5
+    filter:
+      event.dataset: windows.security
+      EventID: 4625
+  - name: successful logon
+    filter:
+      event.dataset: windows.security
+      EventID: 4624
+      LogonType: ['3', '10']
+falsepositives:
+  - User mistyping their password several times before succeeding.

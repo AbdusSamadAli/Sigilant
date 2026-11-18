@@ -1,0 +1,15 @@
+id: corr-ssh-bruteforce
+title: SSH Brute Force Against a Single Account
+type: threshold
+level: high
+description: Many failed SSH password attempts for the same account from one source IP.
+tags: [attack.credential_access, attack.t1110.001]
+filter:
+  event.dataset: linux.auth
+  event.action: ssh_login
+  event.outcome: failure
+group_by: [source.ip, user.name]
+timeframe: 2m
+threshold: 8
+falsepositives:
+  - A misconfigured script or service retrying with an old password (internal source IP).

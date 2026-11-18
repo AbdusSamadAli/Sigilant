@@ -1,0 +1,19 @@
+title: Scheduled Task Created via schtasks.exe
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e07
+status: test
+description: A scheduled task was created from the command line - a common persistence mechanism.
+author: Sigilant
+tags: [attack.persistence, attack.t1053.005]
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    Image|endswith: '\schtasks.exe'
+    CommandLine|contains: '/create'
+  filter_updaters:
+    ParentImage|endswith: ['\GoogleUpdate.exe', '\MicrosoftEdgeUpdate.exe', '\OneDriveSetup.exe']
+  condition: selection and not filter_updaters
+falsepositives:
+  - Software installers and updaters (tuned out in filter_updaters).
+level: medium

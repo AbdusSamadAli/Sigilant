@@ -1,0 +1,18 @@
+title: Certutil Used to Download a File
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e03
+status: test
+description: certutil.exe abused as a downloader (living-off-the-land binary) via -urlcache or -verifyctl.
+author: Sigilant
+tags: [attack.command_and_control, attack.t1105]
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection_img:
+    Image|endswith: '\certutil.exe'
+  selection_cmd:
+    CommandLine|windash|contains: ['-urlcache', '-verifyctl']
+  condition: all of selection_*
+falsepositives:
+  - Administrators testing certificate revocation URLs (rare).
+level: high

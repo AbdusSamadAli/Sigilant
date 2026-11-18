@@ -1,0 +1,20 @@
+title: Encoded PowerShell Command Line
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e01
+status: test
+description: >
+  PowerShell started with an encoded (base64) command. Attackers use -EncodedCommand to hide
+  download cradles and in-memory loaders from casual inspection and simple string matching.
+author: Sigilant
+tags: [attack.execution, attack.t1059.001, attack.defense_evasion, attack.t1027]
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection_img:
+    Image|endswith: ['\powershell.exe', '\pwsh.exe']
+  selection_enc:
+    CommandLine|windash|contains: [' -enc ', ' -encodedcommand ', ' -ec ', ' -e ']
+  condition: all of selection_*
+falsepositives:
+  - Some management agents (SCCM, Intune scripts) use encoded commands - baseline and filter by parent process.
+level: high

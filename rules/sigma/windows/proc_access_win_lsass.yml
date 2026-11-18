@@ -1,0 +1,21 @@
+title: LSASS Memory Access (Credential Dumping)
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e06
+status: test
+description: >
+  A process opened lsass.exe with access rights typical of credential dumping tools
+  (Mimikatz, procdump, comsvcs MiniDump). Sysmon Event ID 10.
+author: Sigilant
+tags: [attack.credential_access, attack.t1003.001]
+logsource:
+  product: windows
+  category: process_access
+detection:
+  selection:
+    TargetImage|endswith: '\lsass.exe'
+    GrantedAccess: ['0x1010', '0x1410', '0x1438', '0x143a', '0x1fffff']
+  filter_legit:
+    SourceImage|endswith: ['\MsMpEng.exe', '\wmiprvse.exe', '\csrss.exe', '\wininit.exe', '\MsSense.exe']
+  condition: selection and not filter_legit
+falsepositives:
+  - Other EDR / AV products - add them to filter_legit after verification.
+level: critical

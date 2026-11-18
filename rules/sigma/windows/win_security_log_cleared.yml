@@ -1,0 +1,16 @@
+title: Security Event Log Cleared
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e11
+status: test
+description: The Windows Security log was cleared (Event ID 1102) - attackers do this to destroy evidence.
+author: Sigilant
+tags: [attack.defense_evasion, attack.t1070.001]
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 1102
+  condition: selection
+falsepositives:
+  - Very rare; lab resets or decommissioning.
+level: high

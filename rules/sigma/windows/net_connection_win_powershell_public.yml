@@ -1,0 +1,19 @@
+title: PowerShell Network Connection to a Public IP
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e08
+status: test
+description: powershell.exe initiated a connection to an internet address (possible download cradle or C2).
+author: Sigilant
+tags: [attack.command_and_control, attack.t1105]
+logsource:
+  product: windows
+  category: network_connection
+detection:
+  selection:
+    Image|endswith: ['\powershell.exe', '\pwsh.exe']
+    Initiated: 'true'
+  filter_private:
+    DestinationIp|cidr: ['10.0.0.0/8', '172.16.0.0/12', '192.168.0.0/16', '127.0.0.0/8']
+  condition: selection and not filter_private
+falsepositives:
+  - Admin scripts that call public APIs or update modules (PowerShell Gallery).
+level: medium

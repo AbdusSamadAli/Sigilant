@@ -1,0 +1,16 @@
+title: Execution from a Suspicious User-Writable Folder
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e04
+status: test
+description: A process was executed from C:\Users\Public, C:\Windows\Temp or C:\PerfLogs - common malware staging folders.
+author: Sigilant
+tags: [attack.execution, attack.t1204.002]
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  selection:
+    Image|contains: ['\Users\Public\', '\Windows\Temp\', '\PerfLogs\']
+  condition: selection
+falsepositives:
+  - Some installers unpack to C:\Windows\Temp - filter known signed installers.
+level: medium

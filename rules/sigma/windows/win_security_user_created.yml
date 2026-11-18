@@ -1,0 +1,16 @@
+title: Local User Account Created
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e09
+status: test
+description: A new user account was created (Event ID 4720).
+author: Sigilant
+tags: [attack.persistence, attack.t1136.001]
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4720
+  condition: selection
+falsepositives:
+  - Helpdesk onboarding - correlate with a change ticket.
+level: medium

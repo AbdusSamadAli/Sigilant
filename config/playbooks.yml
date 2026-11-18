@@ -1,0 +1,68 @@
+playbooks:
+  - id: PB-01
+    name: Brute force / password spraying
+    match_techniques: [T1110]
+    steps:
+      - Confirm volume, targeted accounts and time window from the evidence.
+      - Check source IP reputation (AbuseIPDB / VirusTotal) and geolocation.
+      - Check whether any targeted account authenticated successfully from the same IP.
+      - Block the source IP at the perimeter firewall if external and malicious.
+      - If a login succeeded, escalate to PB-02 (compromised account).
+    actions: [block_ip]
+
+  - id: PB-02
+    name: Compromised account (valid accounts after brute force)
+    match_techniques: [T1078]
+    steps:
+      - Treat as a true positive until proven otherwise - escalate to L2.
+      - Disable or lock the account and revoke active sessions / keys.
+      - Review everything the account did after the suspicious login (sudo, new users, cron, files).
+      - Force a credential reset and enable MFA / key-only SSH authentication.
+    actions: [reset_credentials, block_ip]
+
+  - id: PB-03
+    name: Web application attack
+    match_techniques: [T1190, T1595]
+    steps:
+      - Identify the targeted endpoint, payload and HTTP response codes (200 = possible success).
+      - Check application and database logs for successful exploitation or data access.
+      - Block the attacker IP on the WAF / firewall.
+      - Raise a ticket with the application owner to fix the vulnerable parameter.
+    actions: [block_ip]
+
+  - id: PB-04
+    name: Malware execution on endpoint
+    match_techniques: [T1059, T1105, T1566, T1027, T1204]
+    steps:
+      - Identify the process tree (parent -> child) and the initial delivery vector (e.g. Office macro).
+      - Check file hashes and contacted domains/IPs against threat intel.
+      - Isolate the host via EDR while preserving memory and disk for forensics.
+      - Block the hash and C2 indicators across the estate; hunt for them on other hosts.
+    actions: [isolate_host, block_hash, block_ip]
+
+  - id: PB-05
+    name: Credential dumping
+    match_techniques: [T1003]
+    steps:
+      - Treat as P1 - credentials on the host must be considered stolen.
+      - Isolate the host immediately.
+      - Reset passwords for every account that logged on to the host; reset KRBTGT twice if domain admin was exposed.
+      - Hunt for lateral movement (4624 type 3/10, 4625 bursts) from this host.
+    actions: [isolate_host]
+
+  - id: PB-06
+    name: Persistence and account manipulation
+    match_techniques: [T1136, T1098, T1053]
+    steps:
+      - Verify with the system owner whether the account / task / group change was authorised (change ticket).
+      - If unauthorised, disable the account and remove the scheduled task.
+      - Review who made the change (SubjectUserName) - that account is likely compromised.
+    actions: [disable_account, remove_scheduled_task]
+
+  - id: PB-07
+    name: Defense evasion - log tampering
+    match_techniques: [T1070]
+    steps:
+      - Log clearing is almost never legitimate on endpoints - escalate.
+      - Recover events from the SIEM (forwarded before deletion) and build the timeline.
+      - Check what happened immediately before the clear - that is what the attacker wanted to hide.

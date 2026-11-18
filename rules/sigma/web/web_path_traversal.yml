@@ -1,0 +1,15 @@
+title: Path Traversal / Local File Inclusion Attempt
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e15
+status: test
+description: Directory traversal sequences or sensitive OS file paths in the request.
+author: Sigilant
+tags: [attack.initial_access, attack.t1190]
+logsource:
+  category: webserver
+detection:
+  selection:
+    url.decoded|contains: ['../', '..\', '/etc/passwd', '/etc/shadow', 'win.ini', 'boot.ini', '/proc/self/environ']
+  condition: selection
+falsepositives:
+  - Badly written clients using relative URLs (verify the response code).
+level: high

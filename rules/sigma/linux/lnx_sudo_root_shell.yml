@@ -1,0 +1,18 @@
+title: Sudo to an Interactive Root Shell
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e12
+status: test
+description: A user used sudo to open a root shell instead of running a specific command.
+author: Sigilant
+tags: [attack.privilege_escalation, attack.t1548.003, attack.execution, attack.t1059.004]
+logsource:
+  product: linux
+  service: auth
+detection:
+  selection:
+    event.action: sudo_command
+    user.target.name: root
+    process.command_line|endswith: ['/bash', '/sh', '/zsh', '/dash', ' -i', '/su', '/su -']
+  condition: selection
+falsepositives:
+  - Administrators who habitually use 'sudo -i' - consider per-user baselines.
+level: medium

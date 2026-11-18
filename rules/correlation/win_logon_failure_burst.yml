@@ -1,0 +1,17 @@
+id: corr-win-logon-spray
+title: Windows Logon Failures Against Many Accounts
+type: distinct_count
+level: high
+description: >
+  Event ID 4625 failures for many different accounts from one source IP against one host
+  (password spraying, often from an already-compromised internal machine).
+tags: [attack.credential_access, attack.t1110.003]
+filter:
+  event.dataset: windows.security
+  EventID: 4625
+group_by: [source.ip, host.name]
+distinct_field: user.name
+timeframe: 5m
+threshold: 4
+falsepositives:
+  - Shared kiosk machines, or a service with many stale credentials.

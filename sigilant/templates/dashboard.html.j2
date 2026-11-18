@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sigilant Dashboard</title>
+<style>
+  :root {
+    --bg: #f6f7f9; --panel: #ffffff; --text: #1d2330; --muted: #5d6677; --line: #e1e4ea;
+    --p1: #c62828; --p2: #e65100; --p3: #b28704; --p4: #4a6a8a; --accent: #2f5bd3;
+    --heat0: #eef1f6; --heat1: #ffd9c7; --heat2: #ffab8a; --heat3: #f2704d;
+    --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0f131a; --panel: #171c25; --text: #e6e9ef; --muted: #98a2b3; --line: #2a3140;
+            --p1: #ef5350; --p2: #ff8a3d; --p3: #e0b43a; --p4: #7fa3c7; --accent: #7aa2ff;
+            --heat0: #1e2430; --heat1: #4a2a22; --heat2: #7a3a28; --heat3: #b4492c; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  header { padding: 20px 24px; border-bottom: 1px solid var(--line); background: var(--panel); }
+  header h1 { margin: 0; font-size: 20px; }
+  header p { margin: 4px 0 0; color: var(--muted); }
+  main { max-width: 1280px; margin: 0 auto; padding: 20px 16px 60px; }
+  h2 { font-size: 16px; margin: 28px 0 12px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+  .kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px 16px; }
+  .kpi .v { font-size: 26px; font-weight: 650; font-variant-numeric: tabular-nums; }
+  .kpi .l { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+  .panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; overflow-x: auto; }
+  .badge { display: inline-block; padding: 1px 8px; border-radius: 10px; font-size: 12px; font-weight: 600; color: #fff; }
+  .P1 { background: var(--p1); } .P2 { background: var(--p2); } .P3 { background: var(--p3); } .P4 { background: var(--p4); }
+  .sev { font-size: 12px; font-weight: 600; text-transform: uppercase; }
+  .sev.critical { color: var(--p1); } .sev.high { color: var(--p2); } .sev.medium { color: var(--p3); } .sev.low, .sev.informational { color: var(--p4); }
+  table { border-collapse: collapse; width: 100%; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; font-size: 12px; }
+  td.num { font-variant-numeric: tabular-nums; text-align: right; }
+  code, pre { font-family: var(--mono); font-size: 12px; }
+  pre { background: var(--bg); padding: 10px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
+  .matrix { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(150px, 1fr); gap: 8px; }
+  .tactic h3 { font-size: 12px; margin: 0 0 6px; text-transform: capitalize; color: var(--muted); }
+  .tech { padding: 6px 8px; border-radius: 6px; margin-bottom: 6px; font-size: 12px; }
+  .tech a { color: inherit; text-decoration: none; font-weight: 600; }
+  .case { margin-bottom: 14px; }
+  .case summary { cursor: pointer; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; font-weight: 600; }
+  .case .meta { color: var(--muted); font-weight: 400; }
+  .summary-text { border-left: 3px solid var(--accent); padding: 4px 12px; margin: 12px 0; }
+  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+  .bar { display: flex; height: 10px; border-radius: 5px; overflow: hidden; background: var(--heat0); }
+  .muted { color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Sigilant &mdash; Security Operations Dashboard</h1>
+  <p>Generated {{ generated }} &middot; intel providers: {{ stats.providers | join(", ") }}</p>
+</header>
+<main>
+  <div class="kpis">
+    <div class="kpi"><div class="v">{{ stats.events }}</div><div class="l">Events ingested</div></div>
+    <div class="kpi"><div class="v">{{ alerts | length }}</div><div class="l">Alerts</div></div>
+    <div class="kpi"><div class="v">{{ cases | length }}</div><div class="l">Cases</div></div>
+    <div class="kpi"><div class="v" style="color:var(--p1)">{{ priority_counts.get("P1", 0) }}</div><div class="l">P1 critical cases</div></div>
+    <div class="kpi"><div class="v">{{ stats.techniques }}</div><div class="l">ATT&amp;CK techniques</div></div>
+    <div class="kpi"><div class="v">{{ "%.1f" | format(stats.noise_reduction) }}&times;</div><div class="l">Events per alert</div></div>
+  </div>
+
+  <h2>MITRE ATT&amp;CK coverage (observed)</h2>
+  <div class="panel">
+    <div class="matrix">
+      {% for tac in tactics %}
+      <div class="tactic">
+        <h3>{{ tac.replace("_", " ") }} ({{ tactic_counts[tac] }})</h3>
+        {% for tech, n in tech_by_tactic[tac].most_common() %}
+          {% set heat = "--heat3" if n >= 3 else ("--heat2" if n == 2 else "--heat1") %}
+          <div class="tech" style="background: var({{ heat }})">
+            <a href="{{ technique_url(tech) }}" target="_blank" rel="noopener">{{ tech }}</a> &times;{{ n }}<br>
+            <span class="muted">{{ technique_name(tech) }}</span>
+          </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <h2>Cases (sorted by risk)</h2>
+  {% for c in cases %}
+  <details class="case panel" {% if c.priority in ("P1", "P2") %}open{% endif %}>
+    <summary>
+      <span class="badge {{ c.priority }}">{{ c.priority }}</span>
+      <span>{{ c.case_id }} &mdash; {{ c.title }}</span>
+      <span class="meta">score {{ c.score }} &middot; {{ c.alerts | length }} alerts &middot; SLA {{ sla[c.priority] }}</span>
+    </summary>
+    <div class="summary-text">{{ c.summary }}</div>
+    <div class="grid2">
+      <div>
+        <h3>Timeline</h3>
+        <table>
+          <tr><th>Time (UTC)</th><th>Detection</th><th>Severity</th><th>ATT&amp;CK</th><th class="num">Score</th></tr>
+          {% for a in c.alerts %}
+          <tr>
+            <td><code>{{ a.first_seen.strftime("%H:%M:%S") }}</code></td>
+            <td>{{ a.rule_title }}{% if a.event_count > 1 %} <span class="muted">({{ a.event_count }} events)</span>{% endif %}</td>
+            <td><span class="sev {{ a.severity }}">{{ a.severity }}</span></td>
+            <td>{% for t in a.techniques %}<a href="{{ technique_url(t) }}" target="_blank" rel="noopener">{{ t }}</a> {% endfor %}</td>
+            <td class="num">{{ a.score }}</td>
+          </tr>
+          {% endfor %}
+        </table>
+      </div>
+      <div>
+        <h3>Indicators &amp; intel</h3>
+        {% set ns = namespace(iocs={}) %}
+        {% for a in c.alerts %}{% for k, v in a.enrichment.items() %}{% set _ = ns.iocs.update({k: v}) %}{% endfor %}{% endfor %}
+        {% if ns.iocs %}
+        <table>
+          <tr><th>IOC</th><th>Type</th><th>Verdict</th></tr>
+          {% for ioc, e in ns.iocs.items() %}
+          <tr><td><code>{{ ioc }}</code></td><td>{{ e.type }}</td>
+              <td><span class="sev {{ 'critical' if e.verdict == 'malicious' else ('medium' if e.verdict == 'suspicious' else 'low') }}">{{ e.verdict }}</span></td></tr>
+          {% endfor %}
+        </table>
+        {% else %}<p class="muted">No external indicators.</p>{% endif %}
+        {% if c.actions %}
+        <h3>Proposed containment <span class="muted">(pending approval)</span></h3>
+        <pre>{% for a in c.actions %}{{ a.command }}
+{% endfor %}</pre>
+        {% endif %}
+      </div>
+    </div>
+    {% if c.playbooks %}
+    <h3>Playbooks</h3>
+    {% for pb in c.playbooks %}
+      <p><strong>{{ pb.id }} &mdash; {{ pb.name }}</strong></p>
+      <ol>{% for s in pb.steps %}<li>{{ s }}</li>{% endfor %}</ol>
+    {% endfor %}
+    {% endif %}
+    <h3>Evidence (sample)</h3>
+    <pre>{% for a in c.alerts %}# {{ a.rule_title }}
+{% for e in a.evidence[:3] %}{{ evidence_line(e) }}
+{% endfor %}{% endfor %}</pre>
+  </details>
+  {% endfor %}
+
+  <h2>Log sources</h2>
+  <div class="panel">
+    <table>
+      <tr><th>File (type)</th><th class="num">Events</th></tr>
+      {% for name, n in stats.sources.items() %}<tr><td>{{ name }}</td><td class="num">{{ n }}</td></tr>{% endfor %}
+    </table>
+  </div>
+</main>
+</body>
+</html>

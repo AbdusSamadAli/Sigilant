@@ -1,0 +1,19 @@
+title: Linux Account Created or Added to Privileged Group
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e13
+status: test
+description: A local account was created, or an account was added to sudo/wheel/root/adm.
+author: Sigilant
+tags: [attack.persistence, attack.t1136.001, attack.t1098]
+logsource:
+  product: linux
+  service: auth
+detection:
+  selection_create:
+    event.action: user_created
+  selection_group:
+    event.action: group_member_added
+    group.name: ['sudo', 'wheel', 'root', 'adm']
+  condition: 1 of selection_*
+falsepositives:
+  - Provisioning by configuration management (Ansible, cloud-init).
+level: medium

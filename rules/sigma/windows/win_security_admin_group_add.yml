@@ -1,0 +1,19 @@
+title: User Added to Local Administrators Group
+id: 6c7e2b1a-41d4-4f0e-9b1e-0a2f6d3c5e10
+status: test
+description: A member was added to the built-in Administrators group (Event ID 4732, SID S-1-5-32-544).
+author: Sigilant
+tags: [attack.persistence, attack.privilege_escalation, attack.t1098]
+logsource:
+  product: windows
+  service: security
+detection:
+  selection:
+    EventID: 4732
+  selection_group:
+    - TargetSid: 'S-1-5-32-544'
+    - TargetUserName: 'Administrators'
+  condition: selection and selection_group
+falsepositives:
+  - Authorised admin changes - verify against change management.
+level: high

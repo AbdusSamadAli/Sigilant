@@ -1,0 +1,22 @@
+id: corr-ssh-success-after-failures
+title: Successful SSH Login After Repeated Failures
+type: sequence
+level: critical
+description: A source IP that just failed many logins then authenticated successfully - likely a guessed password.
+tags: [attack.initial_access, attack.t1078, attack.credential_access, attack.t1110]
+group_by: [source.ip]
+timeframe: 15m
+steps:
+  - name: failed logins
+    min_count: 5
+    filter:
+      event.dataset: linux.auth
+      event.action: ssh_login
+      event.outcome: failure
+  - name: successful login
+    filter:
+      event.dataset: linux.auth
+      event.action: ssh_login
+      event.outcome: success
+falsepositives:
+  - A user who forgot their password and finally got it right (expect few failures, internal IP, single account).

@@ -1,0 +1,224 @@
+2026-11-18T00:17:00.532840+00:00 web01 CRON[3768]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T01:17:00.846580+00:00 web01 CRON[3799]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T01:40:07.355589+00:00 web01 sshd[4251]: Failed password for root from 45.155.205.233 port 43232 ssh2
+2026-11-18T01:40:11.333998+00:00 web01 sshd[4257]: Failed password for root from 45.155.205.233 port 41685 ssh2
+2026-11-18T01:40:16.354397+00:00 web01 sshd[4293]: Failed password for root from 45.155.205.233 port 30638 ssh2
+2026-11-18T01:40:22.737307+00:00 web01 sshd[4295]: Failed password for root from 45.155.205.233 port 44432 ssh2
+2026-11-18T01:40:28.542568+00:00 web01 sshd[4335]: Failed password for root from 45.155.205.233 port 40862 ssh2
+2026-11-18T01:40:33.067413+00:00 web01 sshd[4343]: Failed password for root from 45.155.205.233 port 46785 ssh2
+2026-11-18T01:40:37.109869+00:00 web01 sshd[4349]: Failed password for root from 45.155.205.233 port 58717 ssh2
+2026-11-18T01:40:42.041511+00:00 web01 sshd[4361]: Failed password for root from 45.155.205.233 port 38910 ssh2
+2026-11-18T01:40:47.135848+00:00 web01 sshd[4389]: Failed password for root from 45.155.205.233 port 54765 ssh2
+2026-11-18T01:40:52.156623+00:00 web01 sshd[4424]: Failed password for root from 45.155.205.233 port 43302 ssh2
+2026-11-18T01:40:59.518638+00:00 web01 sshd[4445]: Failed password for root from 45.155.205.233 port 48697 ssh2
+2026-11-18T01:41:02.060320+00:00 web01 sshd[4457]: Failed password for root from 45.155.205.233 port 39144 ssh2
+2026-11-18T01:41:08.075931+00:00 web01 sshd[4475]: Failed password for root from 45.155.205.233 port 59336 ssh2
+2026-11-18T01:41:11.092868+00:00 web01 sshd[4492]: Failed password for root from 45.155.205.233 port 50789 ssh2
+2026-11-18T01:41:14.897820+00:00 web01 sshd[4507]: Failed password for root from 45.155.205.233 port 49928 ssh2
+2026-11-18T01:41:17.904685+00:00 web01 sshd[4515]: Failed password for root from 45.155.205.233 port 38665 ssh2
+2026-11-18T01:41:23.355626+00:00 web01 sshd[4551]: Failed password for root from 45.155.205.233 port 30378 ssh2
+2026-11-18T01:41:29.280871+00:00 web01 sshd[4591]: Failed password for root from 45.155.205.233 port 59996 ssh2
+2026-11-18T01:41:33.552510+00:00 web01 sshd[4607]: Failed password for root from 45.155.205.233 port 31415 ssh2
+2026-11-18T01:41:36.274617+00:00 web01 sshd[4611]: Failed password for root from 45.155.205.233 port 35290 ssh2
+2026-11-18T01:41:40.977531+00:00 web01 sshd[4631]: Failed password for root from 45.155.205.233 port 36611 ssh2
+2026-11-18T01:41:45.796391+00:00 web01 sshd[4645]: Failed password for root from 45.155.205.233 port 47402 ssh2
+2026-11-18T01:41:50.524380+00:00 web01 sshd[4657]: Failed password for root from 45.155.205.233 port 44604 ssh2
+2026-11-18T01:41:55.842718+00:00 web01 sshd[4659]: Failed password for root from 45.155.205.233 port 41370 ssh2
+2026-11-18T01:42:00.016091+00:00 web01 sshd[4661]: Failed password for root from 45.155.205.233 port 31210 ssh2
+2026-11-18T02:10:06.198659+00:00 web01 sshd[4694]: Invalid user admin from 185.220.101.47 port 48056
+2026-11-18T02:10:06.497822+00:00 web01 sshd[4710]: Failed password for invalid user admin from 185.220.101.47 port 48056 ssh2
+2026-11-18T02:10:11.690298+00:00 web01 sshd[4738]: Invalid user test from 185.220.101.47 port 33482
+2026-11-18T02:10:11.688400+00:00 web01 sshd[4770]: Failed password for invalid user test from 185.220.101.47 port 33482 ssh2
+2026-11-18T02:10:17.931896+00:00 web01 sshd[4796]: Invalid user oracle from 185.220.101.47 port 57348
+2026-11-18T02:10:17.531298+00:00 web01 sshd[4816]: Failed password for invalid user oracle from 185.220.101.47 port 57348 ssh2
+2026-11-18T02:10:20.359351+00:00 web01 sshd[4829]: Failed password for ubuntu from 185.220.101.47 port 37522 ssh2
+2026-11-18T02:10:23.364434+00:00 web01 sshd[4833]: Invalid user postgres from 185.220.101.47 port 43261
+2026-11-18T02:10:23.877645+00:00 web01 sshd[4842]: Failed password for invalid user postgres from 185.220.101.47 port 43261 ssh2
+2026-11-18T02:10:25.655830+00:00 web01 sshd[4859]: Invalid user git from 185.220.101.47 port 32317
+2026-11-18T02:10:25.451664+00:00 web01 sshd[4870]: Failed password for invalid user git from 185.220.101.47 port 32317 ssh2
+2026-11-18T02:10:27.697541+00:00 web01 sshd[4895]: Invalid user jenkins from 185.220.101.47 port 32768
+2026-11-18T02:10:27.912825+00:00 web01 sshd[4928]: Failed password for invalid user jenkins from 185.220.101.47 port 32768 ssh2
+2026-11-18T02:10:31.253978+00:00 web01 sshd[4947]: Failed password for deploy from 185.220.101.47 port 49620 ssh2
+2026-11-18T02:10:33.194355+00:00 web01 sshd[4958]: Invalid user admin from 185.220.101.47 port 45055
+2026-11-18T02:10:33.282105+00:00 web01 sshd[4987]: Failed password for invalid user admin from 185.220.101.47 port 45055 ssh2
+2026-11-18T02:10:35.381829+00:00 web01 sshd[5009]: Invalid user test from 185.220.101.47 port 38625
+2026-11-18T02:10:35.573648+00:00 web01 sshd[5030]: Failed password for invalid user test from 185.220.101.47 port 38625 ssh2
+2026-11-18T02:10:38.925251+00:00 web01 sshd[5050]: Invalid user oracle from 185.220.101.47 port 31128
+2026-11-18T02:10:38.228448+00:00 web01 sshd[5073]: Failed password for invalid user oracle from 185.220.101.47 port 31128 ssh2
+2026-11-18T02:10:41.351621+00:00 web01 sshd[5098]: Failed password for ubuntu from 185.220.101.47 port 30035 ssh2
+2026-11-18T02:10:43.292478+00:00 web01 sshd[5131]: Invalid user postgres from 185.220.101.47 port 45553
+2026-11-18T02:10:43.687884+00:00 web01 sshd[5144]: Failed password for invalid user postgres from 185.220.101.47 port 45553 ssh2
+2026-11-18T02:10:46.813944+00:00 web01 sshd[5145]: Invalid user git from 185.220.101.47 port 46539
+2026-11-18T02:10:46.095264+00:00 web01 sshd[5162]: Failed password for invalid user git from 185.220.101.47 port 46539 ssh2
+2026-11-18T02:10:48.418917+00:00 web01 sshd[5200]: Invalid user jenkins from 185.220.101.47 port 34714
+2026-11-18T02:10:48.043690+00:00 web01 sshd[5226]: Failed password for invalid user jenkins from 185.220.101.47 port 34714 ssh2
+2026-11-18T02:10:50.319023+00:00 web01 sshd[5241]: Failed password for deploy from 185.220.101.47 port 39818 ssh2
+2026-11-18T02:10:52.554895+00:00 web01 sshd[5251]: Invalid user admin from 185.220.101.47 port 49188
+2026-11-18T02:10:52.689484+00:00 web01 sshd[5290]: Failed password for invalid user admin from 185.220.101.47 port 49188 ssh2
+2026-11-18T02:10:57.341977+00:00 web01 sshd[5322]: Invalid user test from 185.220.101.47 port 55044
+2026-11-18T02:10:57.156723+00:00 web01 sshd[5341]: Failed password for invalid user test from 185.220.101.47 port 55044 ssh2
+2026-11-18T02:11:03.151783+00:00 web01 sshd[5344]: Invalid user oracle from 185.220.101.47 port 51077
+2026-11-18T02:11:03.864925+00:00 web01 sshd[5377]: Failed password for invalid user oracle from 185.220.101.47 port 51077 ssh2
+2026-11-18T02:11:08.735107+00:00 web01 sshd[5410]: Failed password for ubuntu from 185.220.101.47 port 54046 ssh2
+2026-11-18T02:11:11.549199+00:00 web01 sshd[5443]: Invalid user postgres from 185.220.101.47 port 59815
+2026-11-18T02:11:11.596093+00:00 web01 sshd[5445]: Failed password for invalid user postgres from 185.220.101.47 port 59815 ssh2
+2026-11-18T02:11:17.936199+00:00 web01 sshd[5460]: Invalid user git from 185.220.101.47 port 56147
+2026-11-18T02:11:17.089225+00:00 web01 sshd[5462]: Failed password for invalid user git from 185.220.101.47 port 56147 ssh2
+2026-11-18T02:11:19.668068+00:00 web01 sshd[5486]: Invalid user jenkins from 185.220.101.47 port 34361
+2026-11-18T02:11:19.110012+00:00 web01 sshd[5511]: Failed password for invalid user jenkins from 185.220.101.47 port 34361 ssh2
+2026-11-18T02:11:24.053247+00:00 web01 sshd[5513]: Accepted password for deploy from 185.220.101.47 port 48301 ssh2
+2026-11-18T02:11:24.656646+00:00 web01 sshd[5548]: pam_unix(sshd:session): session opened for user deploy(uid=1002) by (uid=0)
+2026-11-18T02:13:24.713728+00:00 web01 sudo:   deploy : TTY=pts/0 ; PWD=/home/deploy ; USER=root ; COMMAND=/bin/bash
+2026-11-18T02:14:24.256439+00:00 web01 useradd[5580]: new user: name=sysupdate, UID=1003, GID=1003, home=/home/sysupdate, shell=/bin/bash, from=/dev/pts/0
+2026-11-18T02:14:34.276606+00:00 web01 usermod[5581]: add 'sysupdate' to group 'sudo'
+2026-11-18T02:17:00.532416+00:00 web01 CRON[3815]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T03:17:00.733183+00:00 web01 CRON[3849]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T04:17:00.919114+00:00 web01 CRON[3866]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T05:17:00.967609+00:00 web01 CRON[3902]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T06:17:00.936121+00:00 web01 CRON[3915]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T06:42:49.081390+00:00 web01 sshd[1644]: Accepted publickey for bob from 10.0.0.32 port 61896 ssh2: ED25519 SHA256:x
+2026-11-18T06:42:49.600861+00:00 web01 sshd[1665]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T07:04:33.129815+00:00 web01 sshd[1142]: Accepted publickey for bob from 10.0.0.32 port 58528 ssh2: ED25519 SHA256:x
+2026-11-18T07:04:33.661259+00:00 web01 sshd[1180]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T07:05:06.215963+00:00 web01 sshd[1343]: Accepted publickey for deploy from 10.0.0.40 port 60283 ssh2: ED25519 SHA256:x
+2026-11-18T07:05:06.713451+00:00 web01 sshd[1378]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T07:17:00.880803+00:00 web01 CRON[3944]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T07:51:49.594315+00:00 web01 sshd[2376]: Accepted publickey for alice from 10.0.0.31 port 40007 ssh2: ED25519 SHA256:x
+2026-11-18T07:51:49.562685+00:00 web01 sshd[2383]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T08:05:59.488625+00:00 web01 sshd[2523]: Accepted publickey for alice from 10.0.0.31 port 55993 ssh2: ED25519 SHA256:x
+2026-11-18T08:05:59.507337+00:00 web01 sshd[2543]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T08:17:00.143795+00:00 web01 CRON[3971]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T08:18:45.158492+00:00 web01 sshd[3157]: Accepted publickey for alice from 10.0.0.31 port 40902 ssh2: ED25519 SHA256:x
+2026-11-18T08:18:45.948806+00:00 web01 sshd[3187]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T08:21:16.259642+00:00 web01 sshd[1941]: Accepted publickey for bob from 10.0.0.32 port 64194 ssh2: ED25519 SHA256:x
+2026-11-18T08:21:16.409940+00:00 web01 sshd[1973]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T08:37:24.786090+00:00 web01 sshd[2565]: Accepted publickey for alice from 10.0.0.31 port 43348 ssh2: ED25519 SHA256:x
+2026-11-18T08:37:24.776314+00:00 web01 sshd[2582]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T08:39:39.866659+00:00 web01 sshd[3226]: Accepted publickey for deploy from 10.0.0.40 port 60040 ssh2: ED25519 SHA256:x
+2026-11-18T08:39:39.497399+00:00 web01 sshd[3249]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T08:44:46.682554+00:00 web01 sshd[1004]: Accepted publickey for bob from 10.0.0.32 port 52937 ssh2: ED25519 SHA256:x
+2026-11-18T08:44:46.075954+00:00 web01 sshd[1039]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T08:44:50.184777+00:00 web01 sshd[2080]: Accepted publickey for alice from 10.0.0.31 port 42719 ssh2: ED25519 SHA256:x
+2026-11-18T08:44:50.243224+00:00 web01 sshd[2095]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T09:00:10.358671+00:00 web01 sshd[1576]: Accepted publickey for bob from 10.0.0.32 port 64809 ssh2: ED25519 SHA256:x
+2026-11-18T09:00:10.978604+00:00 web01 sshd[1608]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T09:01:42.421154+00:00 web01 sshd[2009]: Accepted publickey for alice from 10.0.0.31 port 54718 ssh2: ED25519 SHA256:x
+2026-11-18T09:01:42.291335+00:00 web01 sshd[2018]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T09:02:03.260565+00:00 web01 sshd[3645]: Failed password for alice from 10.0.0.31 port 51000 ssh2
+2026-11-18T09:02:09.290368+00:00 web01 sshd[3648]: Accepted password for alice from 10.0.0.31 port 51002 ssh2
+2026-11-18T09:03:33.122783+00:00 web01 sshd[1901]: Accepted publickey for bob from 10.0.0.32 port 60018 ssh2: ED25519 SHA256:x
+2026-11-18T09:03:33.061818+00:00 web01 sshd[1915]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T09:09:12.464779+00:00 web01 sshd[3700]: Failed password for alice from 10.0.0.31 port 51000 ssh2
+2026-11-18T09:09:18.642282+00:00 web01 sshd[3733]: Accepted password for alice from 10.0.0.31 port 51002 ssh2
+2026-11-18T09:17:00.127529+00:00 web01 CRON[3997]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T09:34:51.214301+00:00 web01 sshd[2991]: Accepted publickey for bob from 10.0.0.32 port 51066 ssh2: ED25519 SHA256:x
+2026-11-18T09:34:51.654381+00:00 web01 sshd[3031]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T09:46:45.532376+00:00 web01 sshd[3677]: Failed password for alice from 10.0.0.31 port 51000 ssh2
+2026-11-18T09:46:51.589015+00:00 web01 sshd[3679]: Accepted password for alice from 10.0.0.31 port 51002 ssh2
+2026-11-18T09:48:01.170187+00:00 web01 sshd[2327]: Accepted publickey for alice from 10.0.0.31 port 54438 ssh2: ED25519 SHA256:x
+2026-11-18T09:48:01.356572+00:00 web01 sshd[2366]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T10:17:00.463594+00:00 web01 CRON[4018]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T10:35:04.307197+00:00 web01 sshd[3318]: Accepted publickey for alice from 10.0.0.31 port 46972 ssh2: ED25519 SHA256:x
+2026-11-18T10:35:04.252223+00:00 web01 sshd[3356]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T10:43:05.726161+00:00 web01 sshd[2901]: Accepted publickey for bob from 10.0.0.32 port 46345 ssh2: ED25519 SHA256:x
+2026-11-18T10:43:05.361004+00:00 web01 sshd[2930]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T10:43:17.439366+00:00 web01 sshd[3365]: Accepted publickey for bob from 10.0.0.32 port 57837 ssh2: ED25519 SHA256:x
+2026-11-18T10:43:17.063863+00:00 web01 sshd[3388]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T10:48:54.726381+00:00 web01 sudo:    alice : TTY=pts/1 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx
+2026-11-18T11:17:00.076070+00:00 web01 CRON[4034]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T11:25:35.905261+00:00 web01 sshd[2673]: Accepted publickey for deploy from 10.0.0.40 port 61067 ssh2: ED25519 SHA256:x
+2026-11-18T11:25:35.730015+00:00 web01 sshd[2690]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T11:27:25.832967+00:00 web01 sshd[1458]: Accepted publickey for bob from 10.0.0.32 port 48140 ssh2: ED25519 SHA256:x
+2026-11-18T11:27:25.732948+00:00 web01 sshd[1474]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T11:31:22.474318+00:00 web01 sudo:    alice : TTY=pts/1 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx
+2026-11-18T12:00:04.233876+00:00 web01 sshd[2780]: Accepted publickey for deploy from 10.0.0.40 port 60854 ssh2: ED25519 SHA256:x
+2026-11-18T12:00:04.850931+00:00 web01 sshd[2793]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T12:17:00.449145+00:00 web01 CRON[4039]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T12:21:46.084450+00:00 web01 sshd[2945]: Accepted publickey for deploy from 10.0.0.40 port 51948 ssh2: ED25519 SHA256:x
+2026-11-18T12:21:46.107119+00:00 web01 sshd[2960]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T12:28:22.030387+00:00 web01 sshd[2844]: Accepted publickey for bob from 10.0.0.32 port 63953 ssh2: ED25519 SHA256:x
+2026-11-18T12:28:22.828494+00:00 web01 sshd[2862]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T12:35:07.723588+00:00 web01 sshd[2665]: Accepted publickey for deploy from 10.0.0.40 port 44803 ssh2: ED25519 SHA256:x
+2026-11-18T12:35:07.958551+00:00 web01 sshd[2667]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T12:39:25.060816+00:00 web01 sshd[1072]: Accepted publickey for alice from 10.0.0.31 port 59096 ssh2: ED25519 SHA256:x
+2026-11-18T12:39:25.225127+00:00 web01 sshd[1075]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T12:40:32.372974+00:00 web01 sshd[2705]: Accepted publickey for deploy from 10.0.0.40 port 45473 ssh2: ED25519 SHA256:x
+2026-11-18T12:40:32.558463+00:00 web01 sshd[2740]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T13:10:29.504913+00:00 web01 sshd[2306]: Accepted publickey for bob from 10.0.0.32 port 43392 ssh2: ED25519 SHA256:x
+2026-11-18T13:10:29.065271+00:00 web01 sshd[2319]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T13:17:00.223021+00:00 web01 CRON[4059]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T13:18:25.992788+00:00 web01 sshd[3108]: Accepted publickey for bob from 10.0.0.32 port 64358 ssh2: ED25519 SHA256:x
+2026-11-18T13:18:25.760006+00:00 web01 sshd[3119]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T13:37:36.387190+00:00 web01 sshd[2153]: Accepted publickey for alice from 10.0.0.31 port 57517 ssh2: ED25519 SHA256:x
+2026-11-18T13:37:36.593851+00:00 web01 sshd[2174]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T13:53:39.073248+00:00 web01 sshd[1091]: Accepted publickey for alice from 10.0.0.31 port 53702 ssh2: ED25519 SHA256:x
+2026-11-18T13:53:39.095119+00:00 web01 sshd[1127]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T14:10:14.638539+00:00 web01 sshd[1533]: Accepted publickey for deploy from 10.0.0.40 port 49435 ssh2: ED25519 SHA256:x
+2026-11-18T14:10:14.123800+00:00 web01 sshd[1566]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T14:17:00.822016+00:00 web01 CRON[4067]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T14:31:01.537040+00:00 web01 sudo:    alice : TTY=pts/1 ; PWD=/home/alice ; USER=root ; COMMAND=/usr/bin/apt update
+2026-11-18T14:43:42.360717+00:00 web01 sshd[3037]: Accepted publickey for alice from 10.0.0.31 port 61396 ssh2: ED25519 SHA256:x
+2026-11-18T14:43:42.875192+00:00 web01 sshd[3045]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T14:49:42.191200+00:00 web01 sshd[2112]: Accepted publickey for alice from 10.0.0.31 port 59304 ssh2: ED25519 SHA256:x
+2026-11-18T14:49:42.295625+00:00 web01 sshd[2113]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T15:17:00.940600+00:00 web01 CRON[4077]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T15:26:10.582423+00:00 web01 sshd[3625]: Accepted publickey for deploy from 10.0.0.40 port 57390 ssh2: ED25519 SHA256:x
+2026-11-18T15:26:10.822369+00:00 web01 sshd[3632]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T15:40:53.548936+00:00 web01 sshd[3488]: Accepted publickey for alice from 10.0.0.31 port 44975 ssh2: ED25519 SHA256:x
+2026-11-18T15:40:53.019613+00:00 web01 sshd[3517]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T15:59:16.137346+00:00 web01 sshd[3251]: Accepted publickey for alice from 10.0.0.31 port 57966 ssh2: ED25519 SHA256:x
+2026-11-18T15:59:16.014934+00:00 web01 sshd[3258]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T16:17:00.985142+00:00 web01 CRON[4101]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T16:23:35.587472+00:00 web01 sshd[1261]: Accepted publickey for alice from 10.0.0.31 port 50108 ssh2: ED25519 SHA256:x
+2026-11-18T16:23:35.108061+00:00 web01 sshd[1299]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T16:27:25.550708+00:00 web01 sshd[1506]: Accepted publickey for alice from 10.0.0.31 port 49838 ssh2: ED25519 SHA256:x
+2026-11-18T16:27:25.917648+00:00 web01 sshd[1528]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T16:30:21.415949+00:00 web01 sshd[1184]: Accepted publickey for alice from 10.0.0.31 port 59187 ssh2: ED25519 SHA256:x
+2026-11-18T16:30:21.231821+00:00 web01 sshd[1187]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T17:04:42.813735+00:00 web01 sshd[3527]: Accepted publickey for alice from 10.0.0.31 port 40128 ssh2: ED25519 SHA256:x
+2026-11-18T17:04:42.180718+00:00 web01 sshd[3537]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T17:10:21.073731+00:00 web01 sshd[2397]: Accepted publickey for bob from 10.0.0.32 port 40835 ssh2: ED25519 SHA256:x
+2026-11-18T17:10:21.643898+00:00 web01 sshd[2422]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T17:16:13.126182+00:00 web01 sshd[3573]: Accepted publickey for bob from 10.0.0.32 port 63763 ssh2: ED25519 SHA256:x
+2026-11-18T17:16:13.064755+00:00 web01 sshd[3594]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T17:17:00.149924+00:00 web01 CRON[4118]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T17:32:56.364264+00:00 web01 sshd[2461]: Accepted publickey for alice from 10.0.0.31 port 48265 ssh2: ED25519 SHA256:x
+2026-11-18T17:32:56.381853+00:00 web01 sshd[2492]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T17:37:51.390487+00:00 web01 sshd[1306]: Accepted publickey for deploy from 10.0.0.40 port 46156 ssh2: ED25519 SHA256:x
+2026-11-18T17:37:51.574351+00:00 web01 sshd[1311]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T18:03:35.854638+00:00 web01 sshd[3422]: Accepted publickey for bob from 10.0.0.32 port 59115 ssh2: ED25519 SHA256:x
+2026-11-18T18:03:35.441060+00:00 web01 sshd[3455]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T18:17:00.925717+00:00 web01 CRON[4127]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T18:34:12.996382+00:00 web01 sshd[2214]: Accepted publickey for alice from 10.0.0.31 port 56891 ssh2: ED25519 SHA256:x
+2026-11-18T18:34:12.686782+00:00 web01 sshd[2218]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T18:39:26.623241+00:00 web01 sshd[1697]: Accepted publickey for bob from 10.0.0.32 port 51474 ssh2: ED25519 SHA256:x
+2026-11-18T18:39:26.608064+00:00 web01 sshd[1727]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T19:02:44.930129+00:00 web01 sshd[1839]: Accepted publickey for bob from 10.0.0.32 port 52641 ssh2: ED25519 SHA256:x
+2026-11-18T19:02:44.023658+00:00 web01 sshd[1869]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T19:17:00.490456+00:00 web01 CRON[4142]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T19:18:37.324646+00:00 web01 sshd[1787]: Accepted publickey for alice from 10.0.0.31 port 62986 ssh2: ED25519 SHA256:x
+2026-11-18T19:18:37.714328+00:00 web01 sshd[1816]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T19:38:38.454882+00:00 web01 sshd[3271]: Accepted publickey for deploy from 10.0.0.40 port 44562 ssh2: ED25519 SHA256:x
+2026-11-18T19:38:38.866286+00:00 web01 sshd[3285]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T20:08:56.488218+00:00 web01 sshd[1416]: Accepted publickey for bob from 10.0.0.32 port 50293 ssh2: ED25519 SHA256:x
+2026-11-18T20:08:56.968298+00:00 web01 sshd[1446]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T20:14:29.786579+00:00 web01 sshd[3058]: Accepted publickey for bob from 10.0.0.32 port 63314 ssh2: ED25519 SHA256:x
+2026-11-18T20:14:29.501253+00:00 web01 sshd[3070]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T20:17:00.782952+00:00 web01 CRON[4149]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T20:21:56.348669+00:00 web01 sshd[3076]: Accepted publickey for bob from 10.0.0.32 port 60835 ssh2: ED25519 SHA256:x
+2026-11-18T20:21:56.839724+00:00 web01 sshd[3102]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T20:53:50.775813+00:00 web01 sshd[2808]: Accepted publickey for alice from 10.0.0.31 port 53129 ssh2: ED25519 SHA256:x
+2026-11-18T20:53:50.209629+00:00 web01 sshd[2842]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T21:05:19.169280+00:00 web01 sshd[2616]: Accepted publickey for bob from 10.0.0.32 port 62677 ssh2: ED25519 SHA256:x
+2026-11-18T21:05:19.024217+00:00 web01 sshd[2630]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T21:17:00.417602+00:00 web01 CRON[4181]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T21:17:28.990569+00:00 web01 sshd[1745]: Accepted publickey for alice from 10.0.0.31 port 43066 ssh2: ED25519 SHA256:x
+2026-11-18T21:17:28.497128+00:00 web01 sshd[1750]: pam_unix(sshd:session): session opened for user alice(uid=1001) by (uid=0)
+2026-11-18T21:37:40.303677+00:00 web01 sshd[1214]: Accepted publickey for deploy from 10.0.0.40 port 44363 ssh2: ED25519 SHA256:x
+2026-11-18T21:37:40.151262+00:00 web01 sshd[1249]: pam_unix(sshd:session): session opened for user deploy(uid=1001) by (uid=0)
+2026-11-18T21:43:42.291945+00:00 web01 sshd[2045]: Accepted publickey for bob from 10.0.0.32 port 58029 ssh2: ED25519 SHA256:x
+2026-11-18T21:43:42.376198+00:00 web01 sshd[2070]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T21:51:20.836630+00:00 web01 sshd[2254]: Accepted publickey for bob from 10.0.0.32 port 62301 ssh2: ED25519 SHA256:x
+2026-11-18T21:51:20.411439+00:00 web01 sshd[2280]: pam_unix(sshd:session): session opened for user bob(uid=1001) by (uid=0)
+2026-11-18T22:17:00.170703+00:00 web01 CRON[4196]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
+2026-11-18T23:17:00.169309+00:00 web01 CRON[4224]: pam_unix(cron:session): session opened for user root(uid=0) by (uid=0)
